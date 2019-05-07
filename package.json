@@ -1,0 +1,29 @@
+{
+  "name": "parcel-boilerplate",
+  "version": "1.0.0",
+  "description": "Parcel boilerplate for modern javascript development",
+  "main": "index.js",
+  "author": "Fin Mavis",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-clean-dist": "^0.0.6",
+    "postcss-preset-env": "^6.6.0",
+    "sass": "^1.20.1"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.4.4"
+  },
+  "browserslist": [
+    "> 1%",
+    "not ie <= 9",
+    "last 3 versions"
+  ]
+}
