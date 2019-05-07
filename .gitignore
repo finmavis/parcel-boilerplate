@@ -32,6 +32,7 @@ jspm_packages/
 .npm
 
 # Optional eslint cache
+.cache
 .eslintcache
 
 # Yarn Integrity file
