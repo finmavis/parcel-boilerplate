@@ -8,7 +8,7 @@ Parcel boilerplate for Modern JavaScript ES6 and Beyond, using [Babel](https://b
 - [TL;DR](#tldr)
 - [Getting Started](#getting-started)
 - [Support ES6 and Beyond to the project](#support-es6-and-beyond-to-the-project)
-- [Add Dynamic Imports for Code Splitting](#add-dynamic-imports-for-code-splitting)
+- [Using Dynamic Imports for Code Splitting](#using-dynamic-imports-for-code-splitting)
 - [Add CSS to Project](#add-css-to-project)
 - [Add SASS/SCSS to Project](#add-sassscss-to-project)
 - [Add Autoprefix to Project](#add-autoprefix-to-project)
@@ -179,34 +179,9 @@ If you only want to use this parcel boilerplate and dont want to know how to imp
   asyncAwaitSample();
   ```
 
-## Add Dynamic Imports for Code Splitting
+## Using Dynamic Imports for Code Splitting
 
-- Install `@babel/plugin-syntax-dynamic-import` as Development Dependencies
-
-  If you're using **yarn**
-
-  ```
-  yarn add --dev @babel/plugin-syntax-dynamic-import
-  ```
-
-  If you're using **npm**
-
-  ```
-  npm install --save-dev @babel/plugin-syntax-dynamic-import
-  ```
-
-- Open `.babelrc` and update plugins :
-
-  ```
-  {
-    "plugins": [
-      "@babel/plugin-transform-runtime",
-      "@babel/plugin-syntax-dynamic-import"
-    ]
-  }
-  ```
-
-- Now split our code into two files `index.js` and `tes.js` to test `dynamic imports`
+- Split our code into two files `index.js` and `tes.js` to test `dynamic imports`
 
   - `index.js`
 
