@@ -806,10 +806,10 @@
     "@babel/types" "^7.4.4"
     esutils "^2.0.2"
 
-"@babel/runtime@^7.4.4", "@babel/runtime@^7.8.4":
-  version "7.10.5"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.10.5.tgz#303d8bd440ecd5a491eae6117fd3367698674c5c"
-  integrity sha512-otddXKhdNn7d0ptoFRHtMLa8LqDxLYwTjB4nYgM1yy5N6gU/MUf8zqyyLltCH3yAVitBzmwK4us+DD0l/MauAg==
+"@babel/runtime@^7.11.1", "@babel/runtime@^7.4.4", "@babel/runtime@^7.8.4":
+  version "7.11.1"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.11.1.tgz#087afc57e7bf1073e792fe54f8fb3cfa752f9230"
+  integrity sha512-nH5y8fLvVl3HAb+ezbgcgwrH8QbClWo8xzkOu7+oyqngo3EVorwpWJQaqXPjGRpfj7mQvsJCl/S8knkfkPWqrw==
   dependencies:
     regenerator-runtime "^0.13.4"
 
