@@ -10,7 +10,7 @@
     "build": "parcel build ./src/index.html --no-source-maps"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.4",
+    "@babel/core": "^7.14.6",
     "@babel/plugin-transform-runtime": "^7.8.3",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-clean-dist": "^0.0.6",
