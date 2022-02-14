@@ -14,7 +14,7 @@
     "@babel/plugin-transform-runtime": "^7.8.3",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-clean-dist": "^0.0.6",
-    "postcss-preset-env": "^6.7.0",
+    "postcss-preset-env": "^6.7.1",
     "sass": "^1.25.0"
   },
   "dependencies": {
