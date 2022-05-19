@@ -1,0 +1,137 @@
+.products {
+	display: grid;
+	grid-gap: 7px;
+	grid-template-columns: repeat(4, 1fr);
+	overflow-y: hidden;
+	@media only screen and (max-width: 1200px) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	@media only screen and (max-width: 800px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media only screen and (max-width: 450px) {
+		display: flex;
+		margin-bottom: 25px;
+		white-space: nowrap;
+		overflow: scroll;
+	}
+
+	.product-about {
+		display: flex;
+		align-items: center;
+		@media only screen and (max-width: 500px) {
+			align-items: flex-start;
+		}
+		a {
+			margin-left: 15px;
+			@media only screen and (max-width: 500px) {
+				margin-left: 8px;
+				font-size: 12px;
+				align-items: flex-start;
+			}
+		}
+	}
+	.product {
+		background-color: white;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-radius: 4px;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		color: #219ebc;
+		@media only screen and (max-width: 500px) {
+			padding: 8px;
+		}
+	}
+	.product .image {
+		display: flex;
+		align-items: center;
+		justify-items: center;
+		padding: 4px;
+		position: relative;
+	}
+
+	.quantity {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 15px;
+		margin-left: auto;
+		width: 40px;
+		height: 24px;
+		border-radius: 20px;
+		background-color: #f6f6f8;
+		color: #219ebc;
+	}
+	a {
+		color: #023047;
+		font-size: 14px;
+	}
+	&--about {
+		margin: 45px 0px;
+		overflow: visible;
+		@media only screen and (max-width: 450px) {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			white-space: normal;
+		}
+
+		.product {
+			justify-content: auto;
+			padding: 4px;
+		}
+		.image {
+			width: 48px;
+			height: 44px;
+			background-color: #f6f6f8;
+			border-radius: 4px;
+			padding: 4px;
+			position: relative;
+		}
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+		.quantity {
+			@media only screen and (max-width: 500px) {
+				display: flex;
+				align-self: flex-end;
+				width: 27px;
+				height: 20px;
+				font-size: 10px;
+				font-weight: 700;
+				margin-bottom: 4px;
+				margin-right: 0px;
+			}
+		}
+		.product {
+			@media only screen and (max-width: 500px) {
+				align-items: flex-start;
+			}
+		}
+	}
+}
+.show-brand {
+	text-align: center;
+	display: block;
+	width: 100%;
+	color: #219ebc;
+	text-decoration: underline;
+	position: relative;
+	&::before,
+	&::after {
+		position: absolute;
+		content: "";
+		width: calc(50% - 100px);
+		height: 3px;
+		top: 50%;
+		background-color: #f6f6f8;
+	}
+	&::before {
+		left: 0px;
+	}
+	&::after {
+		right: 0px;
+	}
+}

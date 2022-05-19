@@ -1,0 +1,112 @@
+.reviews-wrapper {
+	margin-top: 50px;
+	display: flex;
+	&__help {
+		width: 20%;
+		height: 100%;
+		margin-right: auto;
+		background: #f6f6f8;
+		padding: 20px;
+		border-radius: 16px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		h2 {
+			text-align: center;
+			color: #023047;
+			font-size: 2.4rem;
+			font-weight: 500;
+			margin-bottom: 17px;
+		}
+	}
+	&__preview {
+		width: 75.5%;
+		background: #ffffff;
+	}
+	.review-information {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.review__title h3 {
+		font-size: 2rem;
+		font-weight: 500;
+		color: #023047;
+	}
+	.review {
+		display: flex;
+		border: 1px solid #e4e9eb;
+		border-radius: 12px;
+		padding: 25px;
+		margin-bottom: 20px;
+		&__logo {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 15%;
+			height: 122px;
+			width: 122px;
+			background: #f6f6f8;
+			border-radius: 16px;
+			margin-right: 30px;
+
+			img {
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+		.review-wrapper {
+			width: 85%;
+		}
+	}
+	.review p {
+		margin-top: 20px;
+		color: hsla(200, 95%, 14%, 0.701);
+		line-height: 24px;
+		font-size: 1.4rem;
+		font-weight: 400;
+	}
+	.review a {
+		display: block;
+		margin-top: 25px;
+		color: #00d692;
+		font-size: 1.4rem;
+		text-decoration: underline;
+	}
+	.review__info {
+		display: flex;
+		align-items: center;
+	}
+	.review__info .profile,
+	.review__info .date,
+	.review__info .answer {
+		font-size: 1.2rem;
+		text-align: center;
+	}
+	.review__info .answer {
+		background: #f6f6f8;
+		border-radius: 12px;
+		padding: 6px 12px;
+		color: #219ebc;
+		font-weight: 700;
+		margin-right: 22px;
+		&--space {
+			margin-right: 125px;
+		}
+	}
+	.review__info .profile,
+	.review__info .date {
+		color: hsla(200, 95%, 14%, 0.5);
+		font-size: 1.2rem;
+		line-height: 16px;
+		font-weight: 500;
+	}
+	.review__info .profile {
+		display: flex;
+		align-items: center;
+		margin-right: 22px;
+	}
+	.review__info .date {
+	}
+}

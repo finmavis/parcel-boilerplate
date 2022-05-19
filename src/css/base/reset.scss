@@ -1,0 +1,45 @@
+@use "./fonts";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  min-height: 100vh;
+  font-family: fonts.$font-primary;
+}
+.container,
+section {
+  max-width: 1268px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 50px;
+  @media only screen and (max-width: 900px) {
+    padding: 0 20px;
+  }
+}
+.bigger-container {
+  max-width: 1368px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 50px;
+  @media only screen and (max-width: 900px) {
+    padding: 0 20px;
+  }
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}

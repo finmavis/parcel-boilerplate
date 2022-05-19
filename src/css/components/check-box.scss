@@ -1,0 +1,137 @@
+$scale: 1;
+$checkboxSize: $scale * 25px;
+$spaceBetweenBoxAndText: $scale * 6px;
+$checkboxColorOnHover: rgba(0, 119, 255, 0.2); // rgba(0, 119, 255, 0.06)
+$checkboxBgColorState-unchecked: transparent;
+$checkboxBgColorState-checked: #00d692;
+$checkboxBorderColorState-unchecked: #cccfdb;
+
+$checkmarkHeight: $checkboxSize / 2;
+$checkmarkWidth: $checkmarkHeight / 2;
+$checkmarkThickness: $scale * 2px;
+$checkmarkColorState-unchecked: #023047;
+$checkmarkColorState-checked: #023047;
+$checkmarkColorState-hover: transparent;
+
+$fontSize: $scale * 14px;
+
+.cbx-wrapper {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none; // don't make text highlightable
+	margin-right: 10px;
+
+	// hover over the whole enabled checkbox
+	// input[type="checkbox"]:not([disabled]) + .cbx-label {
+	// 	&:hover {
+	// 		transition: all 0.2s ease;
+	// 		background: $checkboxColorOnHover;
+
+	// 		&:before {
+	// 			transition: all 0.2s ease;
+	// 			border-color: $checkboxBgColorState-checked;
+	// 		}
+	// 	}
+	// }
+
+	input[type="checkbox"] {
+		display: none; // hide original checkbox
+
+		// checkbox
+		+ .cbx-label:before {
+			content: ""; // when it's unchecked
+			display: inline-block;
+			margin-right: $spaceBetweenBoxAndText;
+			width: $checkboxSize;
+			height: $checkboxSize;
+			border-radius: $scale * 3px;
+			border: 1px solid $checkboxBorderColorState-unchecked;
+			transform: scale(1);
+			transition: all 0.2s ease;
+		}
+
+		&:checked {
+			// checkbox
+			+ .cbx-label:before {
+				content: ""; // when it's checked
+				background: $checkboxBgColorState-checked;
+				border-color: $checkboxBgColorState-checked;
+			}
+
+			// checkmark
+			+ .cbx-label .cbx-tick {
+				&:after {
+					border-top-color: $checkmarkColorState-checked;
+					border-right-color: $checkmarkColorState-checked;
+				}
+			}
+		}
+
+		&:disabled {
+			+ .cbx-label {
+				opacity: 0.6;
+			}
+
+			&:checked {
+				// checkbox
+				+ .cbx-label:before {
+					background: $checkboxBgColorState-unchecked;
+					border-color: $checkboxBgColorState-checked;
+				}
+
+				// checkmark
+				+ .cbx-label .cbx-tick:after {
+					border-top-color: $checkboxBgColorState-checked;
+					border-right-color: $checkboxBgColorState-checked;
+				}
+			}
+		}
+	}
+
+	// Label base styling
+	.cbx-label {
+		display: inline-flex;
+		align-items: center;
+		padding: 6px 0px;
+		border-radius: 3px;
+		margin: 0;
+		position: relative;
+		cursor: pointer;
+		font-size: $fontSize;
+		color: #023047;
+		// transition: all 0.2s ease;
+
+		// checkmark-box
+		.cbx-tick {
+			position: absolute;
+			width: $checkboxSize;
+			height: $checkboxSize;
+			background: $checkboxBgColorState-unchecked;
+			border-radius: $scale * 3px;
+
+			// checkmark
+			&:after {
+				content: "";
+				display: block;
+				height: $checkmarkHeight;
+				width: $checkmarkWidth;
+				position: absolute;
+				left: 25%;
+				top: 52%;
+
+				transform: scaleX(-1) rotate(185deg + -45deg);
+				transform-origin: left top;
+				border-right: $checkmarkThickness solid $checkmarkColorState-unchecked;
+				border-top: $checkmarkThickness solid $checkmarkColorState-unchecked;
+			}
+		}
+	}
+}
+
+.cbx-wrapper input[type="checkbox"]:checked + .cbx-label:before {
+	background-color: #fff;
+}
+.cbx-wrapper input[type="checkbox"] + .cbx-label:before {
+	background-color: #00d692;
+}

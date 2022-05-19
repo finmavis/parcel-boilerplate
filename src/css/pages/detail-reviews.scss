@@ -1,0 +1,22 @@
+.pros-cons {
+	margin-top: 25px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	.pros,
+	.cons {
+		display: grid;
+		grid-template-rows: auto;
+		grid-gap: 15px;
+		color: #023047;
+		font-size: 1.6rem;
+		line-height: 16px;
+	}
+	.pros {
+	}
+	.pros__item {
+	}
+	.cons {
+	}
+	.cons__item {
+	}
+}

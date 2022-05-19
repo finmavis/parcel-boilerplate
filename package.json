@@ -1,28 +1,20 @@
 {
-  "name": "parcel-boilerplate",
-  "version": "1.0.0",
-  "description": "Parcel boilerplate for modern javascript development",
-  "main": "index.js",
-  "author": "Fin Mavis",
-  "license": "MIT",
-  "scripts": {
-    "start": "parcel ./src/index.html",
-    "build": "parcel build ./src/index.html --no-source-maps"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.8.4",
-    "@babel/plugin-transform-runtime": "^7.8.3",
-    "parcel-bundler": "^1.12.4",
-    "parcel-plugin-clean-dist": "^0.0.6",
-    "postcss-preset-env": "^6.7.0",
-    "sass": "^1.25.0"
-  },
-  "dependencies": {
-    "@babel/runtime": "^7.8.4"
-  },
-  "browserslist": [
-    "> 1%",
-    "not ie <= 9",
-    "last 3 versions"
-  ]
+	"name": "sport",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"minifySvg": false,
+	"scripts": {
+		"dev": "parcel src/index.html , parcel src/listing.html , parcel src/kategoria.html , parcel src/detail.html,parcel src/detail-about.html,parcel src/help.html,parcel src/detail-reviews.html",
+		"build": "parcel build --no-minify src/index.html , parcel build --no-minify src/listing.html, parcel build --no-minify src/detail-about.html,parcel build --no-minify src/help.html,parcel build --no-minify src/detail-reviews.html"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {},
+	"devDependencies": {
+		"@babel/core": "^7.17.9",
+		"parcel-bundler": "^1.12.5",
+		"sass": "^1.49.7"
+	}
 }

@@ -1,0 +1,145 @@
+.container-card {
+	max-width: 1261px;
+	margin: auto;
+}
+.contact-card {
+	width: 100%;
+	height: 100%;
+	min-height: 250px;
+	border-radius: 12px;
+	position: relative;
+	@media only screen and (max-width: 700px) {
+		background: linear-gradient(225deg, #219ebc 0%, #8345df 100%);
+		box-shadow: 0px 24px 48px rgba(2, 48, 71, 0.3);
+		border-radius: 12px;
+		&:before {
+			position: absolute;
+			bottom: -82px;
+			width: 100%;
+			height: 90px;
+			content: "";
+			z-index: 1;
+			left: 0;
+			background: linear-gradient(#f6f6f8d0, #f6f6f8);
+		}
+	}
+	img {
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: cover;
+	}
+	.desktop-bg {
+		@media only screen and (max-width: 700px) {
+			display: none;
+		}
+	}
+	.mobile-bg {
+		display: none;
+		@media only screen and (max-width: 700px) {
+			display: block;
+			position: absolute;
+			left: 50%;
+			bottom: 58%;
+			transform: translate(-50%, 100%);
+			background-color: transparent;
+		}
+	}
+	&__content {
+		max-width: 500px;
+		position: absolute;
+		top: 21%;
+		left: 110px;
+		color: #fff;
+		@media only screen and (max-width: 1100px) {
+			top: 18%;
+			left: 85px;
+		}
+		@media only screen and (max-width: 1000px) {
+			top: 14%;
+			left: 80px;
+		}
+		@media only screen and (max-width: 800px) {
+			top: 12%;
+			left: 66px;
+		}
+
+		@media only screen and (max-width: 700px) {
+			padding: 50px 20px 0px 20px;
+			position: relative;
+			left: auto;
+			top: auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin: auto;
+			text-align: center;
+		}
+	}
+	&__content h2 {
+		font-size: 4rem;
+		font-weight: 400;
+		margin-bottom: 10px;
+		@media only screen and (max-width: 900px) {
+			font-size: 30px;
+		}
+		@media only screen and (max-width: 400px) {
+			font-size: 24px;
+		}
+	}
+	&__content span {
+		font-weight: 700;
+	}
+	&__content p {
+		font-size: 1.8rem;
+		font-weight: 400;
+		@media only screen and (max-width: 900px) {
+			max-width: 350px;
+		}
+		@media only screen and (max-width: 800px) {
+			font-size: 1.5rem;
+		}
+	}
+	.contact-card-subscription {
+		display: flex;
+		margin-top: 50px;
+		color: #37334a;
+		@media only screen and (max-width: 700px) {
+			flex-direction: column;
+			background-color: #fff;
+			border-radius: 4px;
+			padding: 8px;
+			width: 100%;
+			margin-bottom: 160px;
+		}
+		@media only screen and (max-width: 900px) {
+			margin-top: 15px;
+		}
+	}
+	.contact-card-subscription input {
+		width: 100%;
+		border-radius: 5px;
+		padding-left: 40px;
+		border: none;
+		outline: none;
+		color: #37334a;
+		@media only screen and (max-width: 700px) {
+			padding-left: 0px;
+			padding: 10px 0px;
+			font-size: 14px;
+			text-align: center;
+		}
+		@media only screen and (max-width: 900px) {
+			padding-left: 20px;
+		}
+	}
+	.contact-card-subscription button {
+		margin-left: 8px;
+		@media only screen and (max-width: 800px) {
+			padding: 15px 27px;
+		}
+		@media only screen and (max-width: 700px) {
+			margin: 0px;
+		}
+	}
+}
