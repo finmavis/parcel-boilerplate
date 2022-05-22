@@ -5,8 +5,8 @@
 	"main": "index.js",
 	"minifySvg": false,
 	"scripts": {
-		"dev": "parcel src/index.html , parcel src/listing.html , parcel src/kategoria.html , parcel src/detail.html,parcel src/detail-about.html,parcel src/help.html,parcel src/detail-reviews.html",
-		"build": "parcel build --no-minify src/index.html , parcel build --no-minify src/listing.html, parcel build --no-minify src/detail-about.html,parcel build --no-minify src/help.html,parcel build --no-minify src/detail-reviews.html"
+		"dev": "parcel src/index.html , parcel src/listing.html , parcel src/kategoria.html , parcel src/detail.html,parcel src/detail.html",
+		"build": "parcel build --no-minify src/index.html , parcel build --no-minify src/listing.html,parcel build --no-minify src/kategoria.html, parcel build --no-minify src/detail.html"
 	},
 	"keywords": [],
 	"author": "",

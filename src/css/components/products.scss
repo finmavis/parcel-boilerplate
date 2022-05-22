@@ -112,7 +112,8 @@
 		}
 	}
 }
-.show-brand {
+.show-brand,
+.show-brand-category-page {
 	text-align: center;
 	display: block;
 	width: 100%;
@@ -133,5 +134,11 @@
 	}
 	&::after {
 		right: 0px;
+	}
+}
+.show-brand-category-page {
+	display: none;
+	@media only screen and (max-width: 1000px) {
+		display: block;
 	}
 }

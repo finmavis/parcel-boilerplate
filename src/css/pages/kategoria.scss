@@ -1,5 +1,6 @@
 .current-listing {
 	display: flex;
+	transition: all 0.3s ease-in-out;
 	@media only screen and (max-width: 1000px) {
 		flex-direction: column;
 	}
@@ -24,6 +25,46 @@
 		color: #4d6e7e;
 		font-size: 1.2rem;
 	}
+	.filter-wrapper {
+		display: none;
+		position: relative;
+		@media only screen and (max-width: 1000px) {
+			display: block;
+		}
+	}
+	.current-listing--filter-mobile {
+		background-color: #f6f6f8;
+		transition: all 0.3s ease-in-out;
+		img {
+			margin-left: 35px;
+			transition: all 0.3s ease-in-out;
+		}
+	}
+	.current-listing--filter-mobile.active {
+		background-color: #fff;
+		transition: all 0.3s ease-in-out;
+		padding: 0px 24px;
+		img {
+			transform: rotate(180deg);
+		}
+		.reset-filter-mobile {
+			display: block;
+		}
+	}
+	.right-side {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.current-listing-mobile-filter {
+		display: none;
+	}
+	.current-listing-mobile-filter.active {
+		display: block;
+		background-color: #f6f6f8;
+		padding: 48px 24px;
+		margin-bottom: 30px;
+	}
 	&--filter {
 		width: 22%;
 		background-color: #f6f6f8;
@@ -42,6 +83,15 @@
 			width: 100%;
 		}
 	}
+	&--listed-items.active {
+		padding: 0 50px;
+		@media only screen and (max-width: 700px) {
+			padding: 0 20px;
+		}
+	}
+}
+.current-listing.active {
+	padding: 0px;
 }
 .sorted__filters {
 	display: flex;
@@ -205,6 +255,14 @@ a.button--blue,
 	text-align: center;
 	font-size: 1.4rem;
 	font-weight: 600;
+}
+.reset-filter-mobile {
+	display: none;
+}
+.reset-filter {
+	@media only screen and (max-width: 1000px) {
+		display: none;
+	}
 }
 a.button--blue {
 	display: block;
@@ -382,4 +440,64 @@ a.button--blue {
 	@media only screen and (max-width: 700px) {
 		display: none;
 	}
+}
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+main .list {
+	width: 100%;
+	max-width: 768px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	margin-top: 25px;
+}
+
+main .list .item {
+	padding: 15px;
+	border-bottom: 1px solid #ccc;
+}
+main .list .item:last-of-type {
+	border-bottom: none;
+}
+main .list .item:hover {
+	background: rgba(0, 0, 0, 0.05);
+}
+
+.pagenumbers {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.pagenumbers button {
+	width: 50px;
+	height: 50px;
+
+	appearance: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+
+	background-color: #44aaee;
+
+	margin: 5px;
+	transition: 0.4s;
+
+	color: #fff;
+	font-size: 18px;
+	text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+.pagenumbers button:hover {
+	background-color: #44eeaa;
+}
+
+.pagenumbers button.active {
+	background-color: #44eeaa;
+	box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
 }

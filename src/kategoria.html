@@ -282,7 +282,7 @@
 						<div class="quantity">4</div>
 					</div>
 				</div>
-				<a href="#" class="show-brand">Zobraziť značky</a>
+				<a href="#" class="show-brand-category-page">Zobraziť značky</a>
 			</div>
 		</div>
 		<div class="current-listing container">
@@ -394,9 +394,122 @@
 				   <a href="#" class="button--blue">Zobraziť (1245)</a>
                    <p class="reset-filter">Zresetovať filter</p>
 			</div>
-			<div class="current-listing--filter-mobile">
-				<span>Mobile</span>
-				<img src="./imgs/arrow-down.svg" alt="arrow down">
+			<div class="filter-wrapper">
+				<div class="current-listing--filter-mobile">
+					<span>Filter</span>
+					<div class="right-side">
+						<span class="reset-filter-mobile">Zresetovať Filter</span>
+						<img src="./imgs/arrow-down.svg" alt="arrow down">
+					</div>
+				</div>
+				<div class="current-listing-mobile-filter">
+					<h4>Paramter checkbox</h4>
+					<div class="label-wrapper">
+						<div class="cbx-wrapper">
+							<input type="checkbox" name="checkbox" id="check1" checked />
+							<label id="cbx-label1" class="cbx-label" for="check1" >
+								<span role="checkbox" class="cbx-tick" tabindex="0" aria-checked="true" aria-labelledby="cbx-label1"></span>
+								Label
+							</label>
+						</div>
+						<div class="cbx-wrapper">
+							<input type="checkbox" name="checkbox" id="check2" checked />
+							<label id="cbx-label2" class="cbx-label" for="check2" >
+								<span role="checkbox" class="cbx-tick" tabindex="0" aria-checked="true" aria-labelledby="cbx-label1"></span>
+								Label
+							</label>
+						</div>
+						<div class="cbx-wrapper">
+							<input type="checkbox" name="checkbox" id="check3" checked />
+							<label id="cbx-label3" class="cbx-label" for="check3">
+								<span role="checkbox" class="cbx-tick" tabindex="0" aria-checked="true" aria-labelledby="cbx-label1"></span>
+								Label
+							</label>
+						</div>
+					</div>
+					<div class="search-wrapper">
+						<h4>Parameter With Search & Numbers</h4>
+						<input type="search" />
+					</div>
+					<div class="label-wrapper">
+						<div class="cbx-wrapper">
+							<input type="checkbox" name="checkbox" id="check4" checked />
+							<label id="cbx-labe4" class="cbx-label" for="check4" onclick="changeCheckbox(this)" onKeyPress="changeCheckbox(this)">
+								<span role="checkbox" class="cbx-tick" tabindex="0" aria-checked="true" aria-labelledby="cbx-label1"></span>
+								Label
+							</label>
+						</div>
+						<div class="cbx-wrapper">
+							<input type="checkbox" name="checkbox" id="check5" checked />
+							<label id="cbx-labe5" class="cbx-label" for="check5" onclick="changeCheckbox(this)" onKeyPress="changeCheckbox(this)">
+								<span role="checkbox" class="cbx-tick" tabindex="0" aria-checked="true" aria-labelledby="cbx-label1"></span>
+								Label
+							</label>
+						</div>
+						<div class="cbx-wrapper">
+							<input type="checkbox" name="checkbox" id="check6" checked />
+							<label id="cbx-labe6" class="cbx-label" for="check6" onclick="changeCheckbox(this)" onKeyPress="changeCheckbox(this)">
+								<span role="checkbox" class="cbx-tick" tabindex="0" aria-checked="true" aria-labelledby="cbx-label1"></span>
+								Label
+							</label>
+						</div>
+						<div class="label-link-wrapper">
+							<a href="#">Zobraziť všetky (25)</a>
+						</div>
+						<div class="range-slider">
+							<h3>Parameter input</h3>
+							<div class="slider">
+								<div class="progress"></div>
+							</div>
+							<div class="range-input">
+								<input type="range" class="range-min" min="0" max="500" value="100" step="10">
+								<input type="range" class="range-max" min="0" max="500" value="320" step="10">
+							</div>
+							<div class="price-input">
+							   <div class="field">
+							   <input type="number" class="input-min" value="100">
+							   </div>
+							   <div class="field">
+							   <input type="number" class="input-max" value="320">
+							   </div>
+						   </div>
+						</div>
+					</div>
+					<h4>Paramteres labels</h4>
+					<div class="parameter-labels">
+						<div class="parameter-label">S</div>
+						<div class="parameter-label">M</div>
+						<div class="parameter-label">L</div>
+						<div class="parameter-label">XXXL</div>
+					</div>
+					<h4>Paramteres labels</h4>
+					<div class="parameter-labels">
+						<div class="parameter-label">S</div>
+						<div class="parameter-label">M</div>
+						<div class="parameter-label">L</div>
+						<div class="parameter-label">XXXL</div>
+					</div>
+					<div class="dropdown-filter">
+						<h4>Closed less important</h3>
+							<div class="dropdown-filter--wrapper">
+								<div class="dropdown-filter--item">filter</div>
+								<div class="dropdown-filter--item">filter</div>
+								<div class="dropdown-filter--item">filter</div>
+								<div class="dropdown-filter--item">filter</div>
+							</div>
+					</div>
+					<div class="dropdown-filter second">
+						<h4>Closed less important</h3>
+							<div class="dropdown-filter--wrapper second">
+								<div class="dropdown-filter--item">filter</div>
+								<div class="dropdown-filter--item">filter</div>
+								<div class="dropdown-filter--item">filter</div>
+								<div class="dropdown-filter--item">filter</div>
+							</div>
+					</div>
+					   <a href="#" class="button--blue">Zobraziť (1245)</a>
+					   <p class="reset-filter">Zresetovať filter</p>
+					</div>
 			</div>
 			<div class="current-listing--listed-items">
 			<div class="sorted__filters">
@@ -684,9 +797,10 @@
 			<h1 style="text-align: center">Pagination chyba</h1>
 		</div>
 		<div class="contact full-width-wrapper">
-			<div class="container-card">
+			<div class="container-card container-card--white">
 				<div class="contact-card">
-					<img src="./imgs/Background.png" alt="" />
+					<img src="./imgs/Background.png" alt="" class="desktop-bg" />
+					<img src="./imgs/bg-mobile-removebg-preview.png" alt="" class="mobile-bg" />
 					<div class="contact-card__content">
 						<h2>Zostaňme v <span>kontakte</span></h2>
 						<p>Dostavajte najvýhodnejšie ponuky priamo na váš email.</p>
@@ -698,7 +812,7 @@
 				</div>
 			</div>
 		</div>
-		<footer>
+		<footer class="footer--listing">
 			<img src="./imgs/Rectangle.png" alt="" class="rect" />
 			<div class="container container-footer">
 				<div class="footer__menu">
