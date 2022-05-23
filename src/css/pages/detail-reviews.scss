@@ -1,7 +1,10 @@
-.pros-cons {
+.pros-cons,
+.pros-cons-mobile {
 	margin-top: 25px;
 	display: grid;
+	grid-gap: 10px;
 	grid-template-columns: repeat(2, 1fr);
+	text-align: left;
 	.pros,
 	.cons {
 		display: grid;
@@ -18,5 +21,20 @@
 	.cons {
 	}
 	.cons__item {
+	}
+}
+.pros-cons {
+	@media only screen and (max-width: 800px) {
+		display: none;
+	}
+}
+.pros-cons-mobile {
+	display: none;
+	.cons {
+		margin-top: 15px;
+	}
+	@media only screen and (max-width: 800px) {
+		display: flex;
+		flex-direction: column;
 	}
 }

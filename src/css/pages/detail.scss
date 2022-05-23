@@ -358,7 +358,7 @@
 			color: #023047;
 			font-size: 2rem;
 			font-weight: 500;
-			margin-bottom: 35px;
+			margin-bottom: 15px;
 			@media only screen and (max-width: 500px) {
 				font-size: 16px;
 			}
@@ -370,7 +370,7 @@
 			line-height: 28px;
 		}
 		ul {
-			margin-top: 3rem;
+			padding: 40px 10px;
 		}
 		li {
 			list-style: inside;
@@ -379,6 +379,10 @@
 			font-weight: 500;
 			margin-left: 5px;
 			margin-bottom: 25px;
+			text-align: left;
+		}
+		li:last-child {
+			margin-bottom: 0px;
 		}
 	}
 }
@@ -404,8 +408,7 @@
 		font-size: 2rem;
 		font-weight: 500;
 		line-height: 26px;
-		padding-bottom: 10px;
-		border-bottom: 1px solid #e4e9eb;
+		margin-bottom: 25px;
 	}
 }
 
@@ -413,57 +416,48 @@
 	display: block;
 	flex-grow: 1;
 }
+.categories {
+	.product__menu {
+		padding: 20px 10px;
+		border-bottom: 1px solid #e4e9eb;
+	}
+	.product__menu li {
+		text-align: left;
+	}
+	.product__menu:first-of-type {
+		border-top: 1px solid #e4e9eb;
+	}
+	.product-heading {
+		display: flex;
+		justify-content: space-between;
+	}
+	.product-heading h4 {
+		color: #023047;
+		font-size: 14px;
+	}
+	.product-links {
+		display: none;
+	}
+	.product-links li a {
+		font-size: 14px;
+		color: #023047;
+		margin-bottom: 15px;
+	}
+}
 
+.product-links.visible {
+	margin-top: 20px;
+	display: block;
+}
 .category {
 	display: flex;
 	justify-content: space-between;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	// border-top: 1px solid #e4e9eb;
-	// border-bottom: 1px solid #e4e9eb;
 
 	span {
 		color: #023047;
 		font-size: 1.4rem;
 		font-weight: bold;
 	}
-}
-.subCategories a {
-	margin-top: 15px;
-	margin-bottom: 15px;
-}
-.subCategories a:last-child {
-	position: relative;
-}
-.category label {
-	flex-shrink: 0;
-}
-
-.subCategories-toggle {
-	display: none;
-}
-
-.subCategories {
-	margin-left: 5px;
-}
-
-/* ✨ Here is the magic ✨ */
-
-:root {
-	--line_height: 20px;
-}
-
-.categories a {
-	line-height: var(--line_height);
-}
-
-.subCategories-toggle + .subCategories {
-	height: 100vh;
-	max-height: 0;
-	overflow: hidden;
-	transition: max-height 200ms ease;
-}
-
-.subCategories-toggle:checked + .subCategories {
-	max-height: calc(var(--count_categories) * var(--line_height));
 }

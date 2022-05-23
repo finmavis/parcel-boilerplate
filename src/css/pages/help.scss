@@ -1,13 +1,13 @@
 .reviews-wrapper {
 	margin-top: 50px;
 	display: flex;
-	@media only screen and (max-width: 1100px) {
+	@media only screen and (max-width: 800px) {
 		flex-direction: column;
 	}
 	&__help {
-		width: 20%;
 		height: 100%;
-		margin-right: auto;
+		margin-right: 30px;
+		min-width: 262px;
 		background: #f6f6f8;
 		padding: 20px;
 		border-radius: 16px;
@@ -15,21 +15,20 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		@media only screen and (max-width: 1100px) {
+		@media only screen and (max-width: 800px) {
 			width: 100%;
 			margin-bottom: 20px;
 		}
-
 		h2 {
 			text-align: center;
 			color: #023047;
-			font-size: 2.4rem;
+			font-size: 24px;
 			font-weight: 500;
 			margin-bottom: 17px;
 		}
 	}
 	&__preview {
-		width: 75.5%;
+		width: 100%;
 		background: #ffffff;
 		@media only screen and (max-width: 1100px) {
 			width: 100%;
@@ -55,11 +54,35 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		@media only screen and (max-width: 800px) {
+			flex-direction: column-reverse;
+			align-items: flex-start;
+		}
 	}
 	.review__title h3 {
 		font-size: 2rem;
 		font-weight: 500;
 		color: #023047;
+	}
+	.top-filters {
+		display: flex;
+		margin-bottom: 20px;
+	}
+	.top-filters span {
+		color: #4d6e7e;
+		font-size: 12px;
+		font-weight: 700;
+	}
+	.top-filters li {
+		color: #219ebc;
+		font-size: 12px;
+		text-decoration: underline;
+		cursor: pointer;
+		padding: 0 10px;
+	}
+	.top-filters li.selected {
+		color: #4d6e7e;
+		text-decoration: none;
 	}
 	.review {
 		display: flex;
@@ -68,6 +91,9 @@
 		border-radius: 12px;
 		padding: 25px;
 		margin-bottom: 20px;
+		.desktop {
+			display: flex;
+		}
 		&__logo {
 			display: flex;
 			align-items: center;
@@ -78,6 +104,11 @@
 			background: #f6f6f8;
 			border-radius: 16px;
 			margin-right: 30px;
+			@media only screen and (max-width: 800px) {
+				height: 63px;
+				width: 63px;
+				margin-right: 15px;
+			}
 
 			img {
 				max-width: 100%;
@@ -89,6 +120,7 @@
 		}
 	}
 	.review p {
+		text-align: left;
 		margin-top: 20px;
 		color: hsla(200, 95%, 14%, 0.701);
 		line-height: 24px;
@@ -123,6 +155,11 @@
 		color: #219ebc;
 		font-weight: 700;
 		margin-right: 22px;
+		@media only screen and (max-width: 800px) {
+			margin-bottom: 15px;
+			font-size: 10px;
+			color: #00d692;
+		}
 		&--space {
 			margin-right: 125px;
 		}
@@ -143,5 +180,8 @@
 		}
 	}
 	.review__info .date {
+		@media only screen and (max-width: 800px) {
+			display: none;
+		}
 	}
 }

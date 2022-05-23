@@ -3,9 +3,10 @@ footer {
 	padding-bottom: 50px;
 	margin-top: 75px;
 	position: relative;
+	z-index: 1;
 	background-color: #f6f6f8;
 	@media only screen and (max-width: 500px) {
-		padding-top: 130px;
+		padding-top: 100px;
 	}
 	&::before {
 		position: absolute;
@@ -13,10 +14,14 @@ footer {
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: 50px;
-		margin-top: -20px;
+		height: 200px;
+		margin-top: -97px;
 		border-radius: 50%;
 		background-color: #fff;
+		@media only screen and (max-width: 500px) {
+			height: 100px;
+			margin-top: -60px;
+		}
 	}
 	.rect {
 		display: none;
@@ -53,6 +58,7 @@ footer {
 
 	.footer__menu li {
 		margin-bottom: 20px;
+		text-align: left;
 	}
 	.footer__menu li a {
 		color: #023047;
@@ -142,5 +148,8 @@ footer {
 	}
 }
 .footer--listing {
-	margin-top: 100px;
+	margin-top: -40px;
+	@media only screen and (max-width: 700px) {
+		margin-top: 80px;
+	}
 }

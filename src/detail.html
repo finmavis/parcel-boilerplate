@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>TEST</title>
+		<title>TEST1</title>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js" integrity="sha512-IkLiryZhI6G4pnA3bBZzYCT9Ewk87U4DGEOz+TnRD3MrKqaUitt+ssHgn2X/sxoM7FxCP/ROUp6wcxjH/GcI5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css" integrity="sha512-YQlbvfX5C6Ym6fTUSZ9GZpyB3F92hmQAZTO5YjciedwAaGRI9ccNs4iw2QTCJiSPheUQZomZKHQtuwbHkA9lgw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<link rel="stylesheet" href="./css/main.scss" />
@@ -108,11 +108,13 @@
 					<img src="./imgs/search-bar-left-polygon.svg" alt="" class="searchbar-left-polygon" />
 					<img src="./imgs/search-bar-top-right-polygon.svg" alt="" class="searchbar-rigth-polygon" />
 					<form id="form">
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<circle cx="10" cy="10" r="7" stroke="#3E444D" stroke-width="2" />
-							<path d="M17 17L21 21" stroke="#3E444D" stroke-width="2" stroke-linecap="round" />
-						</svg>
-						<input type="search" id="search-x" name="q" placeholder='Vyskúšaj napríklad "Tričko nike"...' />
+						<div class="input-wrapper">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="10" cy="10" r="7" stroke="#3E444D" stroke-width="2" />
+								<path d="M17 17L21 21" stroke="#3E444D" stroke-width="2" stroke-linecap="round" />
+							</svg>
+							<input type="search" id="search-x" name="q" placeholder='Vyskúšaj napríklad "Tričko nike"...' />
+						</div>
 						<button>Vyhladať</button>
 					</form>
 				</div>
@@ -389,7 +391,67 @@
 						<div class="parameters">
 							<div class="categories">
 								<h3>Paramtre produktu</h3>
-								<div class="category">
+								<div class="product__menu">
+									<div class="product-heading">
+										<h4>Názov kategórie produktu</h4>
+										<img src="./imgs/arrow-down.svg" class="footer-arrow" alt="" />
+									</div>
+									<ul class="product-links">
+										<li>
+											<a href="">O nás</a>
+										</li>
+										<li>
+											<a href="">Podmienky používania</a>
+										</li>
+										<li>
+											<a href="">Pužívanie cookies</a>
+										</li>
+										<li>
+											<a href="">Ochrana súkromia</a>
+										</li>
+									</ul>
+								</div>
+								<div class="product__menu">
+									<div class="product-heading">
+										<h4>Názov kategórie produktu</h4>
+										<img src="./imgs/arrow-down.svg" class="footer-arrow" alt="" />
+									</div>
+									<ul class="product-links">
+										<li>
+											<a href="">O nás</a>
+										</li>
+										<li>
+											<a href="">Podmienky používania</a>
+										</li>
+										<li>
+											<a href="">Pužívanie cookies</a>
+										</li>
+										<li>
+											<a href="">Ochrana súkromia</a>
+										</li>
+									</ul>
+								</div>
+								<div class="product__menu">
+									<div class="product-heading">
+										<h4>Názov kategórie produktu</h4>
+										<img src="./imgs/arrow-down.svg" class="footer-arrow" alt="" />
+									</div>
+									<ul class="product-links">
+										<li>
+											<a href="">O nás</a>
+										</li>
+										<li>
+											<a href="">Podmienky používania</a>
+										</li>
+										<li>
+											<a href="">Pužívanie cookies</a>
+										</li>
+										<li>
+											<a href="">Ochrana súkromia</a>
+										</li>
+									</ul>
+								</div>
+								<!-- <div class="category">
 									<span>Názov kategórie parametru</span>
 									<label for="open-category-1">+</label>
 								</div>
@@ -414,7 +476,7 @@
 									<a href="#">2.5</a>
 									<a href="#">2.6</a>
 									<a href="#">2.7</a>
-								</div>
+								</div> -->
 							</div>
 						</div>
 						<div class="product-description">
@@ -440,7 +502,7 @@
 					</div>
 				</div>
 				<div id="reviews" data-tab-content>
-					<div class="reviews-wrapper container">
+					<div class="reviews-wrapper">
 						<div class="reviews-wrapper__help">
 							<h2>Recenzie (32)</h2>
 							<div class="rating">
@@ -453,35 +515,47 @@
 							<a href="#" class="button button--blue">Pridať recenziu</a>
 						</div>
 						<div class="reviews-wrapper__preview">
-							<div class="top-links">
-								<div class="top-links">
-									Zobraziť:
-									<button class="btn" onclick="filterSelection('all')">Všetky</button>
-									<button class="btn" onclick="filterSelection('recommends')">odporúča</button>
-									<button class="btn" onclick="filterSelection('notRecomend')">neodporúča</button>
-								</div>
-							</div>
-							<div class="review">
-								<div class="review__logo">
-									<img src="./imgs/logo-1.svg" alt="" />
-								</div>
-								<div class="review-wrapper">
-									<div class="review-information">
-										<div class="review__title">
-											<h3>Peter</h3>
+							<ul class="top-filters">
+								<span>Zobraziť:</span>
+								<li class="selected" data-target="all">Všetky</li>
+								<li data-target="recomended">odporúča</li>
+								<li data-target="notRecommended">neodporúča</li>
+							</ul>
+							<ul class="shuffle-container">
+								<li class="review" data-groups='["all","recomended"]'>
+									<div class="desktop">
+										<div class="review__logo">
+											<img src="./imgs/logo-1.svg" alt="" />
 										</div>
-										<div class="review__info">
-											<div class="recommends answer">Odporúča produkt</div>
-											<div class="date">14.09.2021</div>
+										<div class="review-wrapper">
+											<div class="review-information">
+												<div class="review__title">
+													<h3>Peter</h3>
+												</div>
+												<div class="review__info">
+													<div class="recommends answer">Odporúča produkt</div>
+													<div class="date">14.09.2021</div>
+												</div>
+											</div>
+											<p>
+												Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut nam dolor alias cumque error iste non est hic, sed voluptatum a repellat dolorum vitae harum. Cum cumque laborum eos dignissimos inventore a molestias provident totam repudiandae quas unde nostrum corporis ratione
+												consequuntur placeat, libero atque ex fugit doloremque quod ducimus?
+											</p>
+											<div class="pros-cons">
+												<div class="pros">
+													<div class="pros__item">+ kladne hodnotenie</div>
+													<div class="pros__item">+ kladne hodnotenie</div>
+												</div>
+												<div class="cons">
+													<div class="cons__item">-zaporne hodnotenie</div>
+													<div class="cons__item">-zaporne hodnotenie</div>
+												</div>
+											</div>
 										</div>
 									</div>
-									<p>
-										Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut nam dolor alias cumque error iste non est hic, sed voluptatum a repellat dolorum vitae harum. Cum cumque laborum eos dignissimos inventore a molestias provident totam repudiandae quas unde nostrum corporis ratione
-										consequuntur placeat, libero atque ex fugit doloremque quod ducimus?
-									</p>
-									<div class="pros-cons">
+									<div class="pros-cons-mobile">
 										<div class="pros">
-											<div class="pros__item">+ kladne hodnotenie</div>
+											<div class="pros__item">+ produkt je určite dobrý ale čakať 2 týždne od objednávky a ešte ho stále nemať na tovar ktorý je skladom je hanba alzakov a nestalo sa to po prvý krát . teraz musím rýchlo zháňať kde ho kúpim</div>
 											<div class="pros__item">+ kladne hodnotenie</div>
 										</div>
 										<div class="cons">
@@ -489,29 +563,41 @@
 											<div class="cons__item">-zaporne hodnotenie</div>
 										</div>
 									</div>
-								</div>
-							</div>
-							<div class="review">
-								<div class="review__logo">
-									<img src="./imgs/logo-1.svg" alt="" />
-								</div>
-								<div class="review-wrapper">
-									<div class="review-information">
-										<div class="review__title">
-											<h3>Peter</h3>
+								</li>
+								<li class="review" data-groups='["all","recomended"]'>
+									<div class="desktop">
+										<div class="review__logo">
+											<img src="./imgs/logo-1.svg" alt="" />
 										</div>
-										<div class="review__info">
-											<div class="answer">Odporúča produkt</div>
-											<div class="date">14.09.2021</div>
+										<div class="review-wrapper">
+											<div class="review-information">
+												<div class="review__title">
+													<h3>Peter</h3>
+												</div>
+												<div class="review__info">
+													<div class="recommends answer">Odporúča produkt</div>
+													<div class="date">14.09.2021</div>
+												</div>
+											</div>
+											<p>
+												Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut nam dolor alias cumque error iste non est hic, sed voluptatum a repellat dolorum vitae harum. Cum cumque laborum eos dignissimos inventore a molestias provident totam repudiandae quas unde nostrum corporis ratione
+												consequuntur placeat, libero atque ex fugit doloremque quod ducimus?
+											</p>
+											<div class="pros-cons">
+												<div class="pros">
+													<div class="pros__item">+ kladne hodnotenie</div>
+													<div class="pros__item">+ kladne hodnotenie</div>
+												</div>
+												<div class="cons">
+													<div class="cons__item">-zaporne hodnotenie</div>
+													<div class="cons__item">-zaporne hodnotenie</div>
+												</div>
+											</div>
 										</div>
 									</div>
-									<p>
-										Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut nam dolor alias cumque error iste non est hic, sed voluptatum a repellat dolorum vitae harum. Cum cumque laborum eos dignissimos inventore a molestias provident totam repudiandae quas unde nostrum corporis ratione
-										consequuntur placeat, libero atque ex fugit doloremque quod ducimus?
-									</p>
-									<div class="pros-cons">
+									<div class="pros-cons-mobile">
 										<div class="pros">
-											<div class="pros__item">+ kladne hodnotenie</div>
+											<div class="pros__item">+ produkt je určite dobrý ale čakať 2 týždne od objednávky a ešte ho stále nemať na tovar ktorý je skladom je hanba alzakov a nestalo sa to po prvý krát . teraz musím rýchlo zháňať kde ho kúpim</div>
 											<div class="pros__item">+ kladne hodnotenie</div>
 										</div>
 										<div class="cons">
@@ -519,29 +605,41 @@
 											<div class="cons__item">-zaporne hodnotenie</div>
 										</div>
 									</div>
-								</div>
-							</div>
-							<div class="review">
-								<div class="review__logo">
-									<img src="./imgs/logo-1.svg" alt="" />
-								</div>
-								<div class="review-wrapper">
-									<div class="review-information">
-										<div class="review__title">
-											<h3>Peter</h3>
+								</li>
+								<li class="review" data-groups='["all","notRecommended"]'>
+									<div class="desktop">
+										<div class="review__logo">
+											<img src="./imgs/logo-1.svg" alt="" />
 										</div>
-										<div class="review__info">
-											<div class="answer">Odporúča produkt</div>
-											<div class="date">14.09.2021</div>
+										<div class="review-wrapper">
+											<div class="review-information">
+												<div class="review__title">
+													<h3>Peter</h3>
+												</div>
+												<div class="review__info">
+													<div class="recommends answer">Odporúča produkt</div>
+													<div class="date">14.09.2021</div>
+												</div>
+											</div>
+											<p>
+												Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut nam dolor alias cumque error iste non est hic, sed voluptatum a repellat dolorum vitae harum. Cum cumque laborum eos dignissimos inventore a molestias provident totam repudiandae quas unde nostrum corporis ratione
+												consequuntur placeat, libero atque ex fugit doloremque quod ducimus?
+											</p>
+											<div class="pros-cons">
+												<div class="pros">
+													<div class="pros__item">+ kladne hodnotenie</div>
+													<div class="pros__item">+ kladne hodnotenie</div>
+												</div>
+												<div class="cons">
+													<div class="cons__item">-zaporne hodnotenie</div>
+													<div class="cons__item">-zaporne hodnotenie</div>
+												</div>
+											</div>
 										</div>
 									</div>
-									<p>
-										Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut nam dolor alias cumque error iste non est hic, sed voluptatum a repellat dolorum vitae harum. Cum cumque laborum eos dignissimos inventore a molestias provident totam repudiandae quas unde nostrum corporis ratione
-										consequuntur placeat, libero atque ex fugit doloremque quod ducimus?
-									</p>
-									<div class="pros-cons">
+									<div class="pros-cons-mobile">
 										<div class="pros">
-											<div class="pros__item">+ kladne hodnotenie</div>
+											<div class="pros__item">+ produkt je určite dobrý ale čakať 2 týždne od objednávky a ešte ho stále nemať na tovar ktorý je skladom je hanba alzakov a nestalo sa to po prvý krát . teraz musím rýchlo zháňať kde ho kúpim</div>
 											<div class="pros__item">+ kladne hodnotenie</div>
 										</div>
 										<div class="cons">
@@ -549,8 +647,8 @@
 											<div class="cons__item">-zaporne hodnotenie</div>
 										</div>
 									</div>
-								</div>
-							</div>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -650,7 +748,7 @@
 				</div>
 			</div>
 		</div>
-		<footer>
+		<footer class="footer--listing">
 			<img src="./imgs/Rectangle.png" alt="" class="rect" />
 			<div class="container container-footer">
 				<div class="footer__menu">
@@ -760,8 +858,29 @@
 			</div>
 		</footer>
 		<div class="copyright">© 2022 <a href="#">Sport.sk</a></div>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<!-- <ul class="shuffle-filter">
+			<li class="selected" data-target="all">All</li>
+			<li data-target="red">Red</li>
+			<li data-target="green">Green</li>
+			<li data-target="blue">Blue</li>
+		</ul>
+		<ul class="shuffle-container">
+			<li data-groups='["all","red"]'><span></span></li>
+			<li data-groups='["all","blue"]'><span></span></li>
+			<li data-groups='["all","green"]'><span></span></li>
+			<li data-groups='["all","red"]'><span></span></li>
+			<li data-groups='["all","green"]'><span></span></li>
+			<li data-groups='["all","blue"]'><span></span></li>
+			<li data-groups='["all","red"]'><span></span></li>
+			<li data-groups='["all","green"]'><span></span></li>
+			<li data-groups='["all","blue"]'><span></span></li>
+			<li data-groups='["all","red"]'><span></span></li>
+			<li data-groups='["all","red"]'><span></span></li>
+			<li data-groups='["all","blue"]'><span></span></li>
+		</ul> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/6.0.0/shuffle.min.js" integrity="sha512-fN+YeX/572qBnWu5Axj90DDyKjSNUfvR+8OaFkz27xnr+QE50vZHefJ+bplRrM284a8cJgMLxEipmKshf8vrug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<script src="./index.js"></script>
 	</body>
 </html>
