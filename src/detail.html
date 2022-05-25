@@ -120,13 +120,17 @@
 				</div>
 			</div>
 		</div>
-		<div class="full-width-wrapper full-width-wrapper--ligth">
+		<div class="full-width-wrapper full-width-wrapper--routes">
 			<div class="routes">
 				<div class="route">
 					<img src="./imgs/home-icon.svg" alt="home-icon" />
+					<img src="./imgs/route-arrow-right-light.svg" alt="" />
 					<a href="#">oblečenie a zimné bundy</a>
 				</div>
-				<a href="#">dámska zimná bunda</a>
+				<div class="route">
+					<img src="./imgs/route-arrow-right-dark.svg" alt="" />
+					<a href="#">dámska zimná bunda</a>
+				</div>
 			</div>
 		</div>
 		<div class="container">
@@ -136,9 +140,15 @@
 						<img class="bigImage" src="./imgs/review-small-1.svg" alt="" />
 					</div>
 					<div class="product-small-img">
-						<img src="./imgs/review-small-1.svg" alt="" class="smallImage" />
-						<img src="./imgs/review-small-2.svg" alt="" class="smallImage" />
-						<img src="./imgs/review-small-3.svg" alt="" class="smallImage" />
+						<div class="product-small-img-container">
+							<img src="./imgs/review-small-1.svg" alt="" class="smallImage" />
+						</div>
+						<div class="product-small-img-container">
+							<img src="./imgs/review-small-2.svg" alt="" class="smallImage" />
+						</div>
+						<div class="product-small-img-container">
+							<img src="./imgs/review-small-2.svg" alt="" class="smallImage" />
+						</div>
 					</div>
 				</div>
 				<div class="product-descriptinon">
@@ -167,14 +177,14 @@
 							<img src="./imgs/transport-icon.svg" alt="" />
 							Doprava
 						</div>
-						<div class="rigth"><span class="dark">0 €</span>+</div>
+						<div class="rigth"><span class="dark">0 €</span><img src="./imgs/plusko.svg" alt="" /></div>
 					</div>
 					<div class="availability">
 						<div class="left">
 							<img src="./imgs/clock.svg" alt="" />
 							Dosptunosť
 						</div>
-						<div class="rigth"><span class="green">Skladom</span></div>
+						<div class="rigth"><span class="green">Skladom</span><img src="./imgs/plusko.svg" alt="" /></div>
 					</div>
 				</div>
 			</div>
@@ -383,6 +393,19 @@
 									<button>Do obchodu</button>
 								</div>
 							</div>
+							<div class="pagination pagination--green">
+								<ul>
+									<li>
+										<a class="active" href="#">1</a>
+									</li>
+									<li>
+										<a href="#">2</a>
+									</li>
+									<li>
+										<a href="#">3</a>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -390,26 +413,9 @@
 					<div class="listed-items__description">
 						<div class="parameters">
 							<div class="categories">
-								<h3>Paramtre produktu</h3>
-								<div class="product__menu">
-									<div class="product-heading">
-										<h4>Názov kategórie produktu</h4>
-										<img src="./imgs/arrow-down.svg" class="footer-arrow" alt="" />
-									</div>
-									<ul class="product-links">
-										<li>
-											<a href="">O nás</a>
-										</li>
-										<li>
-											<a href="">Podmienky používania</a>
-										</li>
-										<li>
-											<a href="">Pužívanie cookies</a>
-										</li>
-										<li>
-											<a href="">Ochrana súkromia</a>
-										</li>
-									</ul>
+								<div class="categories--wrapper">
+									<h3>Paramtre produktu</h3>
+									<img src="./imgs/arrow-down.svg" alt="arrow" class="arrow" />
 								</div>
 								<div class="product__menu">
 									<div class="product-heading">
@@ -451,32 +457,26 @@
 										</li>
 									</ul>
 								</div>
-								<!-- <div class="category">
-									<span>Názov kategórie parametru</span>
-									<label for="open-category-1">+</label>
+								<div class="product__menu">
+									<div class="product-heading">
+										<h4>Názov kategórie produktu</h4>
+										<img src="./imgs/arrow-down.svg" class="footer-arrow" alt="" />
+									</div>
+									<ul class="product-links">
+										<li>
+											<a href="">O nás</a>
+										</li>
+										<li>
+											<a href="">Podmienky používania</a>
+										</li>
+										<li>
+											<a href="">Pužívanie cookies</a>
+										</li>
+										<li>
+											<a href="">Ochrana súkromia</a>
+										</li>
+									</ul>
 								</div>
-								<input class="subCategories-toggle" type="checkbox" id="open-category-1" />
-								<div class="subCategories" style="--count_categories: 5">
-									<a href="#">1.1</a>
-									<a href="#">1.2</a>
-									<a href="#">1.3</a>
-									<a href="#">1.4</a>
-									<a href="#">1.5</a>
-								</div>
-								<div class="category">
-									<span>Názov kategórie parametru</span>
-									<label for="open-category-2">+</label>
-								</div>
-								<input class="subCategories-toggle" type="checkbox" id="open-category-2" />
-								<div class="subCategories" style="--count_categories: 7">
-									<a href="#">2.1</a>
-									<a href="#">2.2</a>
-									<a href="#">2.3</a>
-									<a href="#">2.4</a>
-									<a href="#">2.5</a>
-									<a href="#">2.6</a>
-									<a href="#">2.7</a>
-								</div> -->
 							</div>
 						</div>
 						<div class="product-description">
@@ -653,7 +653,7 @@
 					</div>
 				</div>
 				<div id="help" data-tab-content>
-					<div class="reviews-wrapper container">
+					<div class="reviews-wrapper">
 						<div class="reviews-wrapper__help">
 							<h2>Potrebujete poradiť</h2>
 							<a href="#" class="button button--blue">Pridať otázku</a>
@@ -665,38 +665,25 @@
 										<h3 class="review-heading">Lorem ipsum dolor set amit?</h3>
 									</div>
 									<div class="review__info">
-										<div class="answer">Bez odpovede</div>
-										<div class="profile">
-											<img src="./imgs/person.svg" alt="" />
+										<div class="profile-mobile">
+											<img src="./imgs/user.svg" alt="" />
 											petr velky
 										</div>
-										<div class="date">14.09.2021</div>
+										<div class="review-right-side">
+											<div class="answer">Bez odpovede</div>
+											<div class="reviews-count">35 recenzií</div>
+											<div class="profile">
+												<img src="./imgs/user.svg" alt="" />
+												petr velky
+											</div>
+											<div class="date">14.09.2021</div>
+										</div>
 									</div>
 								</div>
 								<p>
 									Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut nam dolor alias cumque error iste non est hic, sed voluptatum a repellat dolorum vitae harum. Cum cumque laborum eos dignissimos inventore a molestias provident totam repudiandae quas unde nostrum corporis ratione
 									consequuntur placeat, libero atque ex fugit doloremque quod ducimus?
 								</p>
-							</div>
-							<div class="review">
-								<div class="review-information">
-									<div class="review__title">
-										<h3 class="review-heading">Lorem ipsum dolor set amit?</h3>
-									</div>
-									<div class="review__info">
-										<div class="answer">Bez odpovede</div>
-										<div class="profile">
-											<img src="./imgs/person.svg" alt="" />
-											petr velky
-										</div>
-										<div class="date">14.09.2021</div>
-									</div>
-								</div>
-								<p>
-									Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut nam dolor alias cumque error iste non est hic, sed voluptatum a repellat dolorum vitae harum. Cum cumque laborum eos dignissimos inventore a molestias provident totam repudiandae quas unde nostrum corporis ratione
-									consequuntur placeat, libero atque ex fugit doloremque quod ducimus?
-								</p>
-								<a href="#">zobraziť odopoveď</a>
 							</div>
 							<div class="review">
 								<div class="review-information">
@@ -705,13 +692,40 @@
 									</div>
 									<div class="review__info">
 										<div class="profile-mobile">
-											<img src="./imgs/person.svg" alt="" />
+											<img src="./imgs/user.svg" alt="" />
 											petr velky
 										</div>
 										<div class="review-right-side">
 											<div class="answer">Bez odpovede</div>
+											<div class="reviews-count">35 recenzií</div>
 											<div class="profile">
-												<img src="./imgs/person.svg" alt="" />
+												<img src="./imgs/user.svg" alt="" />
+												petr velky
+											</div>
+											<div class="date">14.09.2021</div>
+										</div>
+									</div>
+								</div>
+								<p>
+									Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut nam dolor alias cumque error iste non est hic, sed voluptatum a repellat dolorum vitae harum. Cum cumque laborum eos dignissimos inventore a molestias provident totam repudiandae quas unde nostrum corporis ratione
+									consequuntur placeat, libero atque ex fugit doloremque quod ducimus?
+								</p>
+							</div>
+							<div class="review">
+								<div class="review-information">
+									<div class="review__title">
+										<h3 class="review-heading">Lorem ipsum dolor set amit?</h3>
+									</div>
+									<div class="review__info">
+										<div class="profile-mobile">
+											<img src="./imgs/user.svg" alt="" />
+											petr velky
+										</div>
+										<div class="review-right-side">
+											<div class="answer">Bez odpovede</div>
+											<div class="reviews-count">35 recenzií</div>
+											<div class="profile">
+												<img src="./imgs/user.svg" alt="" />
 												petr velky
 											</div>
 											<div class="date">14.09.2021</div>

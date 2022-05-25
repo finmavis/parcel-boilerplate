@@ -91,6 +91,12 @@
 		border-radius: 12px;
 		padding: 25px;
 		margin-bottom: 20px;
+		@media only screen and (max-width: 800px) {
+			padding: 25px 15px;
+		}
+		@media only screen and (max-width: 380px) {
+			padding: 25px 10px;
+		}
 		.desktop {
 			display: flex;
 		}
@@ -124,7 +130,7 @@
 		margin-top: 20px;
 		color: hsla(200, 95%, 14%, 0.701);
 		line-height: 24px;
-		font-size: 1.4rem;
+		font-size: 14px;
 		font-weight: 400;
 	}
 	.review a {
@@ -156,13 +162,23 @@
 		font-weight: 700;
 		margin-right: 22px;
 		@media only screen and (max-width: 800px) {
-			margin-bottom: 15px;
+			margin-bottom: 0px;
+			margin-right: 12px;
 			font-size: 10px;
 			color: #00d692;
+		}
+		@media only screen and (max-width: 380px) {
+			margin-right: 5px;
+			padding: 6px;
 		}
 		&--space {
 			margin-right: 125px;
 		}
+	}
+	.review__info .reviews-count {
+		font-size: 12px;
+		text-decoration: underline;
+		color: hsla(200, 95%, 14%, 0.5);
 	}
 	.review__info .profile,
 	.review__info .date {
@@ -171,10 +187,29 @@
 		line-height: 16px;
 		font-weight: 500;
 	}
+	.review__info .profile-mobile {
+		font-size: 12px;
+		color: hsla(200, 95%, 14%, 0.5);
+		img {
+			margin-right: 9px;
+			background-color: #f6f6f8;
+			border-radius: 50%;
+			padding: 10px;
+			@media only screen and (max-width: 380px) {
+				margin-right: 5px;
+			}
+		}
+	}
 	.review__info .profile {
 		display: flex;
 		align-items: center;
 		margin-right: 22px;
+		img {
+			margin-right: 9px;
+			background-color: #f6f6f8;
+			border-radius: 50%;
+			padding: 10px;
+		}
 		@media only screen and (max-width: 800px) {
 			display: none;
 		}

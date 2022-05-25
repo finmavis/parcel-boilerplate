@@ -1,8 +1,30 @@
 .routes {
-	max-width: 1550px;
-	padding: 20px 50px;
 	margin: auto;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	.route {
+		display: flex;
+	}
+	.route img,
+	.route a {
+		font-size: 13px;
+		color: #219ebc;
+		margin-right: 20px;
+		white-space: nowrap;
+		text-decoration: underline;
+	}
+	.route:first-child a {
+		margin-right: 40px;
+	}
+	.route:not(:first-child) a {
+		margin-left: 20px;
+	}
+}
+.full-width-wrapper--routes {
+	background-color: #f6f6f8;
+	padding: 20px 60px;
+	@media only screen and (max-width: 900px) {
+		padding: 20px;
+		overflow-y: scroll;
+	}
 }

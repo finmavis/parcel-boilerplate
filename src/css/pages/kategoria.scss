@@ -249,6 +249,24 @@ input[type="range"]::-moz-range-thumb {
 .parameter-labels {
 	margin-bottom: 20px;
 	display: flex;
+	gap: 10px;
+	.parameter-label {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 24px;
+		cursor: pointer;
+		text-transform: uppercase;
+		border-radius: 12px;
+		padding: 8px 12px;
+		border: 1px solid #e4e9eb;
+		font-size: 12px;
+		background-color: #fff;
+		color: #219ebc;
+	}
+	.parameter-label.active {
+		background-color: #00d692;
+	}
 }
 a.button--blue,
 .reset-filter {
@@ -293,8 +311,30 @@ a.button--blue {
 }
 .label-link-wrapper {
 	margin-top: 20px;
+	overflow: hidden;
 	a {
 		color: #219ebc;
+		font-size: 12px;
+		position: relative;
+		&::after {
+			position: absolute;
+			content: "";
+			top: 50%;
+			right: calc(-100% - 10px);
+			width: 100%;
+			height: 1px;
+			transform: translateY(-50%);
+			background-color: #d8d8d8;
+			@media only screen and (max-width: 1000px) {
+				display: none;
+			}
+			@media only screen and (max-width: 800px) {
+				top: 54%;
+				display: block;
+				right: -806%;
+				width: 800%;
+			}
+		}
 	}
 }
 .listing-items {
@@ -391,6 +431,20 @@ a.button--blue {
 	&__item__description .top-informations {
 		display: flex;
 		justify-content: space-between;
+	}
+	&__item__description .top-informations .hot {
+		display: flex;
+		align-items: center;
+		height: 24px;
+		justify-content: center;
+		font-size: 12px;
+		padding: 0 16px;
+		background-color: #fb8500;
+		border-radius: 12px;
+		color: #219ebc;
+		@media only screen and (max-width: 700px) {
+			color: #fff;
+		}
 	}
 	&__item__description .compare-reviews {
 		display: grid;
@@ -522,5 +576,33 @@ main .list .item:hover {
 	.paginationjs-prev,
 	.paginationjs-next {
 		display: none;
+	}
+}
+.pagination {
+	&--green {
+		margin: 40px 0px 60px 0px;
+		@media only screen and (max-width: 700px) {
+			margin: 60px 0px 40px 0px;
+		}
+		ul li a {
+			color: #00d692;
+		}
+	}
+	ul {
+		display: flex;
+		justify-content: flex-end;
+		@media only screen and (max-width: 700px) {
+			justify-content: center;
+		}
+	}
+	li a {
+		padding: 0 10px;
+		font-size: 12px;
+		color: #219ebc;
+		text-decoration: underline;
+	}
+	.active {
+		color: hsla(200deg, 95%, 14%, 0.499);
+		text-decoration: none;
 	}
 }

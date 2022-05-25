@@ -6,7 +6,6 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Sport</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-   		<script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js" integrity="sha512-IkLiryZhI6G4pnA3bBZzYCT9Ewk87U4DGEOz+TnRD3MrKqaUitt+ssHgn2X/sxoM7FxCP/ROUp6wcxjH/GcI5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css" integrity="sha512-YQlbvfX5C6Ym6fTUSZ9GZpyB3F92hmQAZTO5YjciedwAaGRI9ccNs4iw2QTCJiSPheUQZomZKHQtuwbHkA9lgw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<link rel="stylesheet" href="./css/main.scss" />
@@ -364,15 +363,15 @@
 				<h4>Paramteres labels</h4>
 				<div class="parameter-labels">
 					<div class="parameter-label">S</div>
-					<div class="parameter-label">M</div>
+					<div class="parameter-label active">M</div>
 					<div class="parameter-label">L</div>
 					<div class="parameter-label">XXXL</div>
 				</div>
 				<h4>Paramteres labels</h4>
 				<div class="parameter-labels">
-					<div class="parameter-label">S</div>
-					<div class="parameter-label">M</div>
-					<div class="parameter-label">L</div>
+					<div class="parameter-label">36</div>
+					<div class="parameter-label active">38</div>
+					<div class="parameter-label">38</div>
 					<div class="parameter-label">XXXL</div>
 				</div>
 				<div class="dropdown-filter">
@@ -492,7 +491,10 @@
 						<div class="parameter-label">XXXL</div>
 					</div>
 					<div class="dropdown-filter">
-						<h4>Closed less important</h3>
+						<div class="dropdown-filter-heading">
+							<h4>Closed less important</h4>
+							<img src="./imgs/arrow-down.svg" class="footer-arrow" alt="" />
+						</div>
 							<div class="dropdown-filter--wrapper">
 								<div class="dropdown-filter--item">filter</div>
 								<div class="dropdown-filter--item">filter</div>
@@ -501,13 +503,16 @@
 							</div>
 					</div>
 					<div class="dropdown-filter second">
-						<h4>Closed less important</h3>
-							<div class="dropdown-filter--wrapper second">
+						<div class="dropdown-filter-heading">
+							<h4>Closed less important</h4>
+							<img src="./imgs/arrow-down.svg" class="footer-arrow" alt="" />
+						</div>
+						<div class="dropdown-filter--wrapper">
 								<div class="dropdown-filter--item">filter</div>
 								<div class="dropdown-filter--item">filter</div>
 								<div class="dropdown-filter--item">filter</div>
 								<div class="dropdown-filter--item">filter</div>
-							</div>
+						</div>
 					</div>
 					   <a href="#" class="button--blue">Zobraziť (1245)</a>
 					   <p class="reset-filter">Zresetovať filter</p>
@@ -536,16 +541,14 @@
 						<span class="filter">od najdrahších</span>
 					</div>
 			</div>
-				<div id="data-container"></div>
-				<div id="pagination"></div>
-			<!-- <div class="listing-items">
+			 <div class="listing-items">
 				<div class="listing-items__item">
 					<div class="listing-items__item__image">
 						<img src="./imgs/Product Image-1.png" alt="">
 					</div>
 					<div class="listing-items__item__description">
 						<div class="top-informations">
-							<div>top1</div>
+							<div class="hot">Top 1</div>
 							<div class="compare-reviews">
 								<a href="#" class="compare">porovnovať</a>
 								<a href="#">35 recenzií</a>
@@ -570,7 +573,7 @@
 					</div>
 					<div class="listing-items__item__description">
 						<div class="top-informations">
-							<div>top1</div>
+							<div  class="hot">top1</div>
 							<div class="compare-reviews">
 								<a href="#" class="compare">porovnovať</a>
 								<a href="#">35 recenzií</a>
@@ -596,7 +599,7 @@
 					</div>
 					<div class="listing-items__item__description">
 						<div class="top-informations">
-							<div>top1</div>
+							<div  class="hot">top1</div>
 							<div class="compare-reviews">
 								<a href="#" class="compare">porovnovať</a>
 								<a href="#">35 recenzií</a>
@@ -621,7 +624,7 @@
 					</div>
 					<div class="listing-items__item__description">
 						<div class="top-informations">
-							<div>top1</div>
+							<div  class="hot">top1</div>
 							<div class="compare-reviews">
 								<a href="#" class="compare">porovnovať</a>
 								<a href="#">35 recenzií</a>
@@ -647,7 +650,7 @@
 					</div>
 					<div class="listing-items__item__description">
 						<div class="top-informations">
-							<div>top1</div>
+							<div  class="hot">top1</div>
 							<div class="compare-reviews">
 								<a href="#" class="compare">porovnovať</a>
 								<a href="#">35 recenzií</a>
@@ -672,7 +675,7 @@
 					</div>
 					<div class="listing-items__item__description">
 						<div class="top-informations">
-							<div>top1</div>
+							<div  class="hot">top1</div>
 							<div class="compare-reviews">
 								<a href="#" class="compare">porovnovať</a>
 								<a href="#">35 recenzií</a>
@@ -698,7 +701,7 @@
 					</div>
 					<div class="listing-items__item__description">
 						<div class="top-informations">
-							<div>top1</div>
+							<div  class="hot">top1</div>
 							<div class="compare-reviews">
 								<a href="#" class="compare">porovnovať</a>
 								<a href="#">35 recenzií</a>
@@ -723,7 +726,7 @@
 					</div>
 					<div class="listing-items__item__description">
 						<div class="top-informations">
-							<div>top1</div>
+							<div  class="hot">top1</div>
 							<div class="compare-reviews">
 								<a href="#" class="compare">porovnovať</a>
 								<a href="#">35 recenzií</a>
@@ -749,7 +752,7 @@
 					</div>
 					<div class="listing-items__item__description">
 						<div class="top-informations">
-							<div>top1</div>
+							<div  class="hot">top1</div>
 							<div class="compare-reviews">
 								<a href="#" class="compare">porovnovať</a>
 								<a href="#">35 recenzií</a>
@@ -774,7 +777,7 @@
 					</div>
 					<div class="listing-items__item__description">
 						<div class="top-informations">
-							<div>top1</div>
+							<div  class="hot">Top1</div>
 							<div class="compare-reviews">
 								<a href="#" class="compare">porovnovať</a>
 								<a href="#">35 recenzií</a>
@@ -794,7 +797,20 @@
 						</div>
 					</div>
 				</div>
-			</div>				 -->
+			</div>
+			<div class="pagination">
+				<ul>
+					<li>
+						<a class="active" href="#">1</a>
+					</li>
+					<li>
+						<a href="#">2</a>
+					</li>
+					<li>
+						<a href="#">3</a>
+					</li>
+				</ul>
+			</div>
 			</div>
 		</div>
 		<div class="contact full-width-wrapper">

@@ -1,6 +1,5 @@
 const showMoreBtn = document.querySelector(".show-more");
 const overlay = document.querySelector(".show-more-overlay");
-const brands = document.querySelector(".brands");
 const products = document.querySelector(".products");
 const glide = document.querySelector(".glide");
 const glideSmall = document.querySelector(".glide-small");
@@ -23,7 +22,6 @@ if (marqueeContent) {
 if (showMoreBtn) {
 	showMoreBtn.addEventListener("click", () => {
 		overlay.classList.toggle("hidden");
-		brands.classList.toggle("show");
 		products.classList.toggle("visible");
 		showMoreBtn.textContent = "Zobraziť menej";
 		if (showMoreBtn.classList.contains("more")) {
@@ -31,6 +29,15 @@ if (showMoreBtn) {
 			showMoreBtn.classList.remove("more");
 		} else {
 			showMoreBtn.classList.add("more");
+		}
+		if (window.innerWidth <= 450) {
+			if (products.style.flexDirection === "column") {
+				products.style.flexDirection = "row";
+				products.style.paddingBottom = "0" + "px";
+			} else {
+				products.style.flexDirection = "column";
+				products.style.paddingBottom = "40" + "px";
+			}
 		}
 	});
 }
@@ -197,272 +204,3 @@ window.onload = function () {
 		shuffleInstance.filter(keyword);
 	});
 };
-
-// pagination
-$(function () {
-	let container = $("#pagination");
-	container.pagination({
-		pageSize: 10,
-		pageRange: 1,
-		dataSource: [
-			{
-				productName: "Navahoo honigfee dámska zimná bunda",
-				productDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ducimus? Magni deserunt debitis nulla voluptatibus nam, atque vel quasi sequi rerum, doloremque corporis molestias amet ipsam expedita tenetur officiis recusandae reprehenderit inventore.",
-				productImage: "/Product Image-1.847fcd17.png",
-				lowestPrice: 32.8,
-				highestPrice: 44,
-				reviewsCount: 35,
-				shops: 24,
-			},
-			{
-				productName: "Navahoo honigfee dámska zimná bunda",
-				productDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ducimus? Magni deserunt debitis nulla voluptatibus nam, atque vel quasi sequi rerum, doloremque corporis molestias amet ipsam expedita tenetur officiis recusandae reprehenderit inventore.",
-				productImage: "/Product Image-2.bbff1372.png",
-				lowestPrice: 32.8,
-				highestPrice: 44,
-				reviewsCount: 35,
-				shops: 24,
-			},
-			{
-				productName: "Navahoo honigfee dámska zimná bunda",
-				productDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ducimus? Magni deserunt debitis nulla voluptatibus nam, atque vel quasi sequi rerum, doloremque corporis molestias amet ipsam expedita tenetur officiis recusandae reprehenderit inventore.",
-				productImage: "/Product Image-3.cc810867.png",
-				lowestPrice: 32.8,
-				highestPrice: 44,
-				reviewsCount: 35,
-				shops: 24,
-			},
-			{
-				productName: "Navahoo honigfee dámska zimná bunda",
-				productDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ducimus? Magni deserunt debitis nulla voluptatibus nam, atque vel quasi sequi rerum, doloremque corporis molestias amet ipsam expedita tenetur officiis recusandae reprehenderit inventore.",
-				productImage: "/Product Image-4.2a27b993.png",
-				lowestPrice: 32.8,
-				highestPrice: 44,
-				reviewsCount: 35,
-				shops: 24,
-			},
-			{
-				productName: "Navahoo honigfee dámska zimná bunda",
-				productDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ducimus? Magni deserunt debitis nulla voluptatibus nam, atque vel quasi sequi rerum, doloremque corporis molestias amet ipsam expedita tenetur officiis recusandae reprehenderit inventore.",
-				productImage: "/Product Image-5.2d5afb38.png",
-				lowestPrice: 32.8,
-				highestPrice: 44,
-				reviewsCount: 35,
-				shops: 24,
-			},
-			{
-				productName: "Navahoo honigfee dámska zimná bunda",
-				productDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ducimus? Magni deserunt debitis nulla voluptatibus nam, atque vel quasi sequi rerum, doloremque corporis molestias amet ipsam expedita tenetur officiis recusandae reprehenderit inventore.",
-				productImage: "/Product Image-6.40686b0b.png",
-				lowestPrice: 32.8,
-				highestPrice: 44,
-				reviewsCount: 35,
-				shops: 24,
-			},
-			{
-				productName: "Navahoo honigfee dámska zimná bunda",
-				productDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ducimus? Magni deserunt debitis nulla voluptatibus nam, atque vel quasi sequi rerum, doloremque corporis molestias amet ipsam expedita tenetur officiis recusandae reprehenderit inventore.",
-				productImage: "/Product Image-1.847fcd17.png",
-				lowestPrice: 32.8,
-				highestPrice: 44,
-				reviewsCount: 35,
-				shops: 24,
-			},
-			{
-				productName: "Navahoo honigfee dámska zimná bunda",
-				productDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ducimus? Magni deserunt debitis nulla voluptatibus nam, atque vel quasi sequi rerum, doloremque corporis molestias amet ipsam expedita tenetur officiis recusandae reprehenderit inventore.",
-				productImage: "/Product Image-2.bbff1372.png",
-				lowestPrice: 32.8,
-				highestPrice: 44,
-				reviewsCount: 35,
-				shops: 24,
-			},
-			{
-				productName: "Navahoo honigfee dámska zimná bunda",
-				productDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ducimus? Magni deserunt debitis nulla voluptatibus nam, atque vel quasi sequi rerum, doloremque corporis molestias amet ipsam expedita tenetur officiis recusandae reprehenderit inventore.",
-				productImage: "/Product Image-3.cc810867.png",
-				lowestPrice: 32.8,
-				highestPrice: 44,
-				reviewsCount: 35,
-				shops: 24,
-			},
-			{
-				productName: "Navahoo honigfee dámska zimná bunda",
-				productDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ducimus? Magni deserunt debitis nulla voluptatibus nam, atque vel quasi sequi rerum, doloremque corporis molestias amet ipsam expedita tenetur officiis recusandae reprehenderit inventore.",
-				productImage: "/Product Image-4.2a27b993.png",
-				lowestPrice: 32.8,
-				highestPrice: 44,
-				reviewsCount: 35,
-				shops: 24,
-			},
-			{
-				productName: "Navahoo honigfee dámska zimná bunda",
-				productDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ducimus? Magni deserunt debitis nulla voluptatibus nam, atque vel quasi sequi rerum, doloremque corporis molestias amet ipsam expedita tenetur officiis recusandae reprehenderit inventore.",
-				productImage: "/Product Image-5.2d5afb38.png",
-				lowestPrice: 32.8,
-				highestPrice: 44,
-				reviewsCount: 35,
-				shops: 24,
-			},
-			{
-				productName: "Navahoo honigfee dámska zimná bunda",
-				productDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ducimus? Magni deserunt debitis nulla voluptatibus nam, atque vel quasi sequi rerum, doloremque corporis molestias amet ipsam expedita tenetur officiis recusandae reprehenderit inventore.",
-				productImage: "/Product Image-6.40686b0b.png",
-				lowestPrice: 32.8,
-				highestPrice: 44,
-				reviewsCount: 35,
-				shops: 24,
-			},
-			{
-				productName: "Navahoo honigfee dámska zimná bunda",
-				productDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ducimus? Magni deserunt debitis nulla voluptatibus nam, atque vel quasi sequi rerum, doloremque corporis molestias amet ipsam expedita tenetur officiis recusandae reprehenderit inventore.",
-				productImage: "/Product Image-1.847fcd17.png",
-				lowestPrice: 32.8,
-				highestPrice: 44,
-				reviewsCount: 35,
-				shops: 24,
-			},
-			{
-				productName: "Navahoo honigfee dámska zimná bunda",
-				productDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ducimus? Magni deserunt debitis nulla voluptatibus nam, atque vel quasi sequi rerum, doloremque corporis molestias amet ipsam expedita tenetur officiis recusandae reprehenderit inventore.",
-				productImage: "/Product Image-2.bbff1372.png",
-				lowestPrice: 32.8,
-				highestPrice: 44,
-				reviewsCount: 35,
-				shops: 24,
-			},
-			{
-				productName: "Navahoo honigfee dámska zimná bunda",
-				productDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ducimus? Magni deserunt debitis nulla voluptatibus nam, atque vel quasi sequi rerum, doloremque corporis molestias amet ipsam expedita tenetur officiis recusandae reprehenderit inventore.",
-				productImage: "/Product Image-3.cc810867.png",
-				lowestPrice: 32.8,
-				highestPrice: 44,
-				reviewsCount: 35,
-				shops: 24,
-			},
-			{
-				productName: "Navahoo honigfee dámska zimná bunda",
-				productDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ducimus? Magni deserunt debitis nulla voluptatibus nam, atque vel quasi sequi rerum, doloremque corporis molestias amet ipsam expedita tenetur officiis recusandae reprehenderit inventore.",
-				productImage: "/Product Image-4.2a27b993.png",
-				lowestPrice: 32.8,
-				highestPrice: 44,
-				reviewsCount: 35,
-				shops: 24,
-			},
-			{
-				productName: "Navahoo honigfee dámska zimná bunda",
-				productDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ducimus? Magni deserunt debitis nulla voluptatibus nam, atque vel quasi sequi rerum, doloremque corporis molestias amet ipsam expedita tenetur officiis recusandae reprehenderit inventore.",
-				productImage: "/Product Image-5.2d5afb38.png",
-				lowestPrice: 32.8,
-				highestPrice: 44,
-				reviewsCount: 35,
-				shops: 24,
-			},
-			{
-				productName: "Navahoo honigfee dámska zimná bunda",
-				productDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ducimus? Magni deserunt debitis nulla voluptatibus nam, atque vel quasi sequi rerum, doloremque corporis molestias amet ipsam expedita tenetur officiis recusandae reprehenderit inventore.",
-				productImage: "/Product Image-6.40686b0b.png",
-				lowestPrice: 32.8,
-				highestPrice: 44,
-				reviewsCount: 35,
-				shops: 24,
-			},
-			{
-				productName: "Navahoo honigfee dámska zimná bunda",
-				productDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ducimus? Magni deserunt debitis nulla voluptatibus nam, atque vel quasi sequi rerum, doloremque corporis molestias amet ipsam expedita tenetur officiis recusandae reprehenderit inventore.",
-				productImage: "/Product Image-1.847fcd17.png",
-				lowestPrice: 32.8,
-				highestPrice: 44,
-				reviewsCount: 35,
-				shops: 24,
-			},
-			{
-				productName: "Navahoo honigfee dámska zimná bunda",
-				productDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ducimus? Magni deserunt debitis nulla voluptatibus nam, atque vel quasi sequi rerum, doloremque corporis molestias amet ipsam expedita tenetur officiis recusandae reprehenderit inventore.",
-				productImage: "/Product Image-2.bbff1372.png",
-				lowestPrice: 32.8,
-				highestPrice: 44,
-				reviewsCount: 35,
-				shops: 24,
-			},
-			{
-				productName: "Navahoo honigfee dámska zimná bunda",
-				productDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ducimus? Magni deserunt debitis nulla voluptatibus nam, atque vel quasi sequi rerum, doloremque corporis molestias amet ipsam expedita tenetur officiis recusandae reprehenderit inventore.",
-				productImage: "/Product Image-3.cc810867.png",
-				lowestPrice: 32.8,
-				highestPrice: 44,
-				reviewsCount: 35,
-				shops: 24,
-			},
-			{
-				productName: "Navahoo honigfee dámska zimná bunda",
-				productDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ducimus? Magni deserunt debitis nulla voluptatibus nam, atque vel quasi sequi rerum, doloremque corporis molestias amet ipsam expedita tenetur officiis recusandae reprehenderit inventore.",
-				productImage: "/Product Image-4.2a27b993.png",
-				lowestPrice: 32.8,
-				highestPrice: 44,
-				reviewsCount: 35,
-				shops: 24,
-			},
-			{
-				productName: "Navahoo honigfee dámska zimná bunda",
-				productDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ducimus? Magni deserunt debitis nulla voluptatibus nam, atque vel quasi sequi rerum, doloremque corporis molestias amet ipsam expedita tenetur officiis recusandae reprehenderit inventore.",
-				productImage: "/Product Image-5.2d5afb38.png",
-				lowestPrice: 32.8,
-				highestPrice: 44,
-				reviewsCount: 35,
-				shops: 24,
-			},
-			{
-				productName: "Navahoo honigfee dámska zimná bunda",
-				productDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ducimus? Magni deserunt debitis nulla voluptatibus nam, atque vel quasi sequi rerum, doloremque corporis molestias amet ipsam expedita tenetur officiis recusandae reprehenderit inventore.",
-				productImage: "/Product Image-6.40686b0b.png",
-				lowestPrice: 32.8,
-				highestPrice: 44,
-				reviewsCount: 35,
-				shops: 24,
-			},
-		],
-		callback: function (data, pagination) {
-			var dataHtml = "<div class='listing-items'>";
-			$.each(data, function (index, item) {
-				dataHtml += `
-				<div class="listing-items__item">
-				<div class="listing-items__item__image">
-					<img src='${item.productImage}' alt="">			
-				</div>
-					<div class="listing-items__item__description">
-						<div class="top-informations">
-							<div>top1</div>
-							<div class="compare-reviews">
-								<a href="#" class="compare">porovnovať</a>
-								<a href="#">${item.reviewsCount} recenzií</a>
-							</div>
-						</div>
-						<h2 class="product-heading">
-							${item.productName}
-						</h2>
-						<p>${item.productDescription}</p>
-						<div class="pricing">
-							<button>Porovnať ceny</button>
-							<div class="price">
-								<span>od ${item.lowestPrice} € ~ ${item.highestPrice} €</span>
-								<a href="#">v ${item.shops} obchodoch</a>
-							</div>
-						</div>
-					</div>
-				</div> 
-				`;
-			});
-
-			dataHtml += "</div>";
-			let width = window.innerWidth;
-			$("#data-container").html(dataHtml);
-			$("body,html").animate(
-				{
-					scrollTop: 450,
-				},
-				600
-			);
-		},
-	});
-});
