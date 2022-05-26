@@ -188,19 +188,19 @@ tabs.forEach((tab) => {
 });
 
 // Shuffle //
-window.onload = function () {
-	const Shuffle = window.Shuffle;
-	const element = document.querySelector(".shuffle-container");
+// window.onload = function () {
+// 	const Shuffle = window.Shuffle;
+// 	const element = document.querySelector(".shuffle-container");
 
-	const shuffleInstance = new Shuffle(element, {
-		itemSelector: "li",
-	});
+// 	const shuffleInstance = new Shuffle(element, {
+// 		itemSelector: "li",
+// 	});
 
-	$(".top-filters li").on("click", function (e) {
-		e.preventDefault();
-		$(".top-filters li").removeClass("selected");
-		$(this).addClass("selected");
-		const keyword = $(this).attr("data-target");
-		shuffleInstance.filter(keyword);
-	});
-};
+// 	$(".top-filters li").on("click", function (e) {
+// 		e.preventDefault();
+// 		$(".top-filters li").removeClass("selected");
+// 		$(this).addClass("selected");
+// 		const keyword = $(this).attr("data-target");
+// 		shuffleInstance.filter(keyword);
+// 	});
+// };

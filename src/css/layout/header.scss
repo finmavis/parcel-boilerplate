@@ -21,9 +21,20 @@ header {
 	li a {
 		font-weight: 500;
 		color: #023047;
-		@media only screen and (max-width: 700px) {
-			font-size: 14px;
+		font-size: 14px;
+		position: relative;
+		transition: all 0.3s ease-in-out;
+		&:hover {
+			color: currentColor;
+			opacity: 0.7;
+			transition: all 0.3s ease-in-out;
 		}
+	}
+	li a.active {
+		background-color: hsla(161, 100%, 42%, 0.1);
+		padding: 10px;
+		border-radius: 16px;
+		color: #00d692;
 	}
 	li a.blue {
 		color: #219ebc;
@@ -36,6 +47,7 @@ header {
 	.login {
 		display: flex;
 		align-items: center;
+		font-size: 14px;
 	}
 	.login .hearth {
 		display: flex;
@@ -45,6 +57,17 @@ header {
 		background-color: #f6f6f8;
 		border-radius: 50%;
 		margin-right: 11px;
+		cursor: pointer;
+		svg {
+			transform: scale(1);
+			transition: all 0.3s ease-in-out;
+		}
+		&:hover {
+			svg {
+				transform: scale(1.2);
+				transition: all 0.3s ease-in-out;
+			}
+		}
 		@media only screen and (max-width: 1200px) {
 			padding: 0px;
 			width: 40px;
@@ -63,6 +86,14 @@ header {
 		background-color: #f6f6f8;
 		padding: 6px;
 		border-radius: 50px;
+		cursor: pointer;
+		&:hover {
+			background-color: #00d692;
+			p {
+				color: #f6f6f8;
+			}
+			transition: all 0.3s ease-in-out;
+		}
 		@media only screen and (max-width: 1200px) {
 			padding: 0px;
 		}
@@ -236,7 +267,6 @@ header {
 		margin-top: 0px;
 		transform: rotate(-405deg);
 	}
-
 	@media (max-width: 1200px) {
 		.menu-button-container {
 			display: flex;
@@ -267,12 +297,16 @@ header {
 		}
 		.menu > li {
 			display: flex;
+			align-items: center;
 			justify-content: center;
 			margin: 0;
 			padding: 0.5em 0;
 			width: 100%;
 			color: white;
 			background-color: #222;
+		}
+		.menu a {
+			color: white;
 		}
 		.menu > li:not(:last-child) {
 			border-bottom: 1px solid #444;

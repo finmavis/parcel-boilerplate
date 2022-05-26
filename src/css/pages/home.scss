@@ -50,6 +50,7 @@
 		padding-left: 18px;
 		@media only screen and (max-width: 600px) {
 			margin-bottom: 10px;
+			padding-left: 0px;
 		}
 	}
 	input {
@@ -60,6 +61,9 @@
 		color: #94a6b0;
 		font-weight: 400;
 		font-size: 1.6rem;
+		@media only screen and (max-width: 600px) {
+			padding: 6px 0px 6px 10px;
+		}
 	}
 }
 
@@ -73,6 +77,11 @@ button {
 	border-radius: 5px;
 	font-size: 1.4rem;
 	font-weight: 600;
+	transition: background-color 0.2s ease-in-out;
+	&:hover {
+		background-color: #00d692c6;
+		transition: background-color 0.2s ease-in-out;
+	}
 }
 input::placeholder {
 	color: #94a6b0;
@@ -80,6 +89,7 @@ input::placeholder {
 	font-size: 1.4rem;
 	line-height: 2.4rem;
 }
+
 .full-width-wrapper {
 	position: relative;
 	height: 100%;
@@ -130,7 +140,6 @@ input::placeholder {
 }
 #search-x::-webkit-search-cancel-button {
 	position: relative;
-	right: 20px;
 }
 .popular {
 	display: flex;
@@ -176,6 +185,11 @@ input::placeholder {
 	z-index: 11;
 	padding: 15px 30px;
 	background-color: #219ebc;
+	transition: background-color 0.2s ease-in-out;
+	&:hover {
+		background-color: #35b5d5;
+		transition: background-color 0.2s ease-in-out;
+	}
 	@media only screen and (max-width: 450px) {
 		bottom: 6px;
 		font-size: 14px;
@@ -545,16 +559,16 @@ input::placeholder {
 	border-radius: 12px;
 	height: 6.4rem;
 	width: 6.4rem;
-	@media only screen and (max-width: 600px) {
-		height: 5rem;
-		width: 5rem;
-	}
 	font-size: 3.25rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
 	box-shadow: 0px 8px 16px rgba(53, 82, 68, 0.133392);
+	@media only screen and (max-width: 600px) {
+		height: 5rem;
+		width: 5rem;
+	}
 	svg {
 		width: 1rem;
 		height: 1rem;
@@ -574,6 +588,9 @@ input::placeholder {
 }
 .slider__btn--left {
 	left: 0%;
+	&:hover {
+		background: #023047e8;
+	}
 	@media only screen and (max-width: 900px) {
 		top: 150px;
 		left: 2%;
@@ -587,6 +604,9 @@ input::placeholder {
 }
 .slider__btn--right {
 	right: 0%;
+	&:hover {
+		background: #023047e8;
+	}
 	@media only screen and (max-width: 900px) {
 		top: 150px;
 		right: 2%;
